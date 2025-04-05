@@ -1,0 +1,158 @@
+.forecast-container {
+    width: 100%;
+    padding: 20px;
+}
+  
+.forecast-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+  
+.forecast-cards {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+  
+.forecast-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    min-width: 120px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+  
+.forecast-card:hover {
+    transform: translateY(-5px);
+}
+  
+.forecast-day {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #ff7b00;
+}
+  
+.forecast-icon {
+    margin: 10px 0;
+    color: #555;
+}
+  
+.forecast-temp {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+  
+.forecast-condition {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: capitalize;
+}
+  
+.forecast-loading,
+.forecast-error,
+.forecast-empty {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+}
+
+.skeleton-container {
+    width: 100%;
+    padding: 20px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+  
+.skeleton-title {
+    height: 30px;
+    width: 200px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+  
+.skeleton-cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+  
+.skeleton-forecast-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+  
+.skeleton-card, .skeleton-forecast-card {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 15px;
+    min-width: 100px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-shrink: 0;
+}
+  
+.skeleton-time, .skeleton-day {
+    height: 20px;
+    width: 60%;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+  
+.skeleton-icon {
+    height: 36px;
+    width: 36px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+  
+.skeleton-temp {
+    height: 24px;
+    width: 40%;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+  
+@keyframes pulse {
+    0% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.6;
+    }
+}
+  
+@media (max-width: 768px) {
+    .forecast-cards {
+      justify-content: flex-start;
+    }
+    
+    .forecast-card {
+      min-width: 100px;
+      padding: 12px;
+    }
+    
+    .forecast-temp {
+      font-size: 1.1rem;
+    }
+    
+    .forecast-condition {
+      font-size: 0.8rem;
+    }
+}

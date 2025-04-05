@@ -1,0 +1,54 @@
+.weather-page {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+  
+.weather-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+.weather-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+  
+.city-name {
+    font-size: 2rem;
+    color: #333;
+    text-transform: capitalize;
+}
+  
+.error-container,
+.loading-container {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+  
+.error-message {
+    color: #e74c3c;
+    font-size: 1.2rem;
+}
+  
+@media (max-width: 768px) {
+    .weather-content {
+      padding: 15px;
+    }
+    
+    .city-name {
+      font-size: 1.5rem;
+    }
+    
+    .weather-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+}
