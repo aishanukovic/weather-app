@@ -74,6 +74,12 @@ const WeatherMap = () => {
         .bindPopup(`<b>${weatherData.name}, ${weatherData.sys.country}</b>`)
         .openPopup();
 
+      setTimeout(() => {
+        if (mapRef.current) {
+          mapRef.current.invalidateSize();
+        }
+      }, 200);
+
     } catch (error) {
       console.error('Map initialization error:', error);
       setMapError('Failed to initialize map: ' + error.message);
@@ -136,7 +142,9 @@ const WeatherMap = () => {
   useEffect(() => {
     const handleResize = () => {
       if (mapRef.current) {
-        mapRef.current.invalidateSize();
+        setTimeout(() => {
+          mapRef.current.invalidateSize();
+        }, 100);
       }
     };
     
